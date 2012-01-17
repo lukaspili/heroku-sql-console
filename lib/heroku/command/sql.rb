@@ -8,7 +8,7 @@ class Heroku::Command::Sql < Heroku::Command::Base
   def index
     database_url = heroku.config_vars(app)['DATABASE_URL']
 
-    sqlconsole_history_read(app)
+    #sqlconsole_history_read(app)
 
     display "SQL console for #{app}.#{heroku.host}"
     while sql = Readline.readline('SQL> ')
